@@ -2,6 +2,11 @@ import Rotoscope
 import UIKit
 import SwiftUI
 
+public enum PullToRefresh {
+    public static func install() {
+        Rotoscope.install()
+    }
+}
 
 public extension View {
     func onPull(perform: @escaping () -> Void, isLoading: Bool) -> some View {
