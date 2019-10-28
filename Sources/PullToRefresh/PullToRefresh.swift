@@ -26,6 +26,7 @@ internal struct PullToRefreshModifier: ViewModifier {
             DispatchQueue.main.async {
                 // 本当は直接指定したい
                 let tableView = Rotoscope.lastTableView
+                self.handler.onPull = self.onPull
                 let refreshControl = tableView?.refreshControl ?? UIRefreshControl()
                 refreshControl.addTarget(self.handler, action: #selector(PullToRefreshHandler.valueChanged(_:)), for: .valueChanged)
                 tableView?.refreshControl = refreshControl
