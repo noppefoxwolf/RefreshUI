@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Rotoscope",
+        "repositoryURL": "git@github.com:noppefoxwolf/Rotoscope.git",
+        "state": {
+          "branch": null,
+          "revision": "e1056731e4455640fc7011ff8be8002245fe59a0",
+          "version": "0.0.9"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
