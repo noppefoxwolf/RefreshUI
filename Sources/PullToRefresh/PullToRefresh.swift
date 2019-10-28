@@ -25,10 +25,11 @@ internal struct PullToRefreshModifier: ViewModifier {
             // mainでasyncすることでビュー構築後に実行する
             DispatchQueue.main.async {
                 // 本当は直接指定したい
-                let refreshControl = Rotoscope.lastTableView?.refreshControl ?? UIRefreshControl()
+                let tableView = Rotoscope.lastTableView
+                let refreshControl = tableView?.refreshControl ?? UIRefreshControl()
                 refreshControl.addTarget(self.handler, action: #selector(PullToRefreshHandler.valueChanged(_:)), for: .valueChanged)
-                Rotoscope.lastTableView?.refreshControl = refreshControl
-                refreshControl.setValue(self.handler, forKey: "com.noppe.refreshControl.handler")
+                tableView?.refreshControl = refreshControl
+                tableView?.refreshControlHandler = self.handler
             }
         }
     }
@@ -42,4 +43,21 @@ internal class PullToRefreshHandler: NSObject {
         refreshControl = sender
         onPull?()
     }
+}
+
+var StoredPropertyKey: UInt8 = 0
+
+extension UITableView {
+    var refreshControlHandler: PullToRefreshHandler? {
+        get {
+            guard let object = objc_getAssociatedObject(self, &StoredPropertyKey) as? PullToRefreshHandler else {
+                return nil
+            }
+            return object
+        }
+        set {
+            objc_setAssociatedObject(self, &StoredPropertyKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+
 }
