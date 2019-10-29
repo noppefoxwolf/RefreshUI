@@ -7,6 +7,10 @@
 # Usage
 
 ```swift
+PullToRefresh.install()
+```
+
+```swift
 List {
     ForEach(items, id: \.self) { (item) in
         Text("\(item)")
