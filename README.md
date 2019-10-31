@@ -1,4 +1,4 @@
-# PullToRefresh
+# RefreshUI
 
 ![](https://github.com/noppefoxwolf/PullToRefresh/blob/master/.github/ios.gif)
 
