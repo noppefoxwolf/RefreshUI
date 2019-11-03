@@ -1,5 +1,9 @@
 # RefreshUI
 
+RefreshUI provide native refresh control to SwiftUI.
+
+⚠️ This library uses blackmagic.🧞‍♂️
+
 | iOS | macOS |
 |---|---|
 |![](https://github.com/noppefoxwolf/PullToRefresh/blob/master/.github/ios.gif)|![](https://github.com/noppefoxwolf/PullToRefresh/blob/master/.github/mac.gif)|
