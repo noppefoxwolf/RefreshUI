@@ -4,22 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "PullToRefresh",
+    name: "RefreshUI",
     platforms: [.iOS(.v13)],
     products: [
         .library(
-            name: "PullToRefresh",
-            targets: ["PullToRefresh"]),
+            name: "RefreshUI",
+            targets: ["RefreshUI"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:noppefoxwolf/Rotoscope.git", from: .init("0.0.9"))
+        .package(url: "git@github.com:noppefoxwolf/Rotoscope.git", from: .init("0.1.0"))
     ],
     targets: [
         .target(
-            name: "PullToRefresh",
+            name: "RefreshUI",
             dependencies: ["Rotoscope"]),
         .testTarget(
-            name: "PullToRefreshTests",
-            dependencies: ["PullToRefresh"]),
+            name: "RefreshUITests",
+            dependencies: ["RefreshUI"]),
     ]
 )
