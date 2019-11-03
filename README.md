@@ -1,14 +1,10 @@
 # RefreshUI
 
-![](https://github.com/noppefoxwolf/PullToRefresh/blob/master/.github/ios.gif)
-
-![](https://github.com/noppefoxwolf/PullToRefresh/blob/master/.github/mac.gif)
+| iOS | macOS |
+|---|---|
+|![](https://github.com/noppefoxwolf/PullToRefresh/blob/master/.github/ios.gif)|![](https://github.com/noppefoxwolf/PullToRefresh/blob/master/.github/mac.gif)|
 
 # Usage
-
-```swift
-PullToRefresh.install()
-```
 
 ```swift
 List {
@@ -19,3 +15,7 @@ List {
     self.items.shuffle()
 }, isLoading: isLoading)
 ```
+
+# License
+
+RefreshUI is licensed under the MIT License. See the LICENSE file for more information.
