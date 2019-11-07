@@ -38,10 +38,10 @@ public extension List {
 
 extension Notification.Name {
     static var beginRefreshing: Notification.Name {
-        Notification.Name(rawValue: "com.noppe.refreshUI")
+        Notification.Name(rawValue: "com.noppe.refreshUI.beginRefreshing")
     }
     static var endRefreshing: Notification.Name {
-        Notification.Name(rawValue: "com.noppe.refreshUI")
+        Notification.Name(rawValue: "com.noppe.refreshUI.endRefreshing")
     }
 }
 
