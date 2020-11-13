@@ -1,3 +1,7 @@
+RefreshUI is no longer available.
+I'm preferred to use Introspect.
+https://github.com/siteline/SwiftUI-Introspect
+
 # RefreshUI
 
 RefreshUI provide native refresh control to SwiftUI.
